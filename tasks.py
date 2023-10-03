@@ -15,6 +15,7 @@ def robot_spare_bin_python():
     download_excel_file()
     fill_form_with_excel_data()
     collect_results()
+    log_out()
 
 def open_the_intranet_website():
     """Navigates to the given URL"""
@@ -56,3 +57,8 @@ def collect_results():
     """Take a screenshot of the page"""
     page = browser.page()
     page.screenshot(path="output/sales_summary.png")
+
+def log_out():
+    """Presses the 'Log out' button"""
+    page = browser.page()  
+    page.click("text=Log out")
